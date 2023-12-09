@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <title>Валют шилжүүлэгч</title>
-    <link rel="stylesheet" href="html,.css" />
+    <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <h1>Валют шилжүүлэгч</h1>
-    <p class="convert">
-        Мөнгөн дүнгээ оруулна уу :
+    <header>
+        <h1>Валют шилжүүлэгч</h1>
+    </header>
+
+    <section class="converter">
+        <label for="original-currency-amount">Мөнгөн дүнгээ оруулна уу:</label>
         <input type="number" id="original-currency-amount" placeholder="0" value="1">
-    </p>
-    <div>
-        <select id="from_currency">
+
+        <div class="currency-selection">
+            <select id="from_currency">
                 <option value="CNY">CNY</option>
                 <option value="CZK">CZK</option>
                 <option value="EGP">EGP</option>
@@ -30,7 +33,7 @@
                 <option value="MNT">MNT</option>
             </select>
             <button id="exchange">
-                <span>&#8601;</span>
+                <span>&#8596;</span>
             </button>
             <select id="to_currency">
                 <option value="CNY">CNY</option>
@@ -43,18 +46,22 @@
                 <option value="KRW">KRW</option>
                 <option value="PHP">PHP</option>
                 <option value="RUB">RUB</option>
+                <option value="MNT" selected>MNT</option>
                 <option value="USD">USD</option>
             </select>
         </div>
-        <p class="exchange">
-            Валютын Ханш:
-            <input type="text" id="exchange-rate">
+
+        <p class="exchange-rate">
+            <label for="exchange-rate">Валютын Ханш:</label>
+            <input type="text" id="exchange-rate" readonly>
         </p>
+
         <button id="exchange_button">Шилжүүлэх!</button>
+
         <p id="output-text">
             <span id="from"></span> Бол <span id="to"></span>
         </p>
-        <script src="tootsooluur javascript.js"></script>
-    </body>
-    
-    </html>
+    </section>
+
+    <script src="tootsooluur-javascript.js"></script>
+</body>
